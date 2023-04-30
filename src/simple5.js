@@ -1,9 +1,15 @@
 "use strict";
-let n = 100;
+let a = Number(prompt("Enter a number"));
+let result = 0;
 
-nextPrime: for (let i = 2; i <= n; i++) {
-  for (let j = 2; j < i; j++) {
-    if (i % j == 0) continue nextPrime;
+if (Number.isNaN(a) || a < 0) {
+  console.log("Enter wrong number");
+} else {
+  while (a != 4) {
+    if (a % 5 == 0) {
+      result++;
+    }
+    a--;
   }
-  console.log(i);
+  console.log(result);
 }
