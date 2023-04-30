@@ -5,11 +5,11 @@ let result = 0;
 if (Number.isNaN(a) || a < 0) {
   console.log("Enter wrong number");
 } else {
-  while (a != 4) {
+  while (a != 0) {
     if (a % 5 == 0) {
       result++;
     }
     a--;
   }
-  console.log(result);
+  console.log('Number of multiples of 5 = '+result);
 }
