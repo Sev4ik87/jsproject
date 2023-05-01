@@ -6,28 +6,28 @@ if (Number.isNaN(a) || a < 0) {
 } else {
   switch (m) {
     case 0:
-      console.log("---");
+      console.log("--- (no permissions)");
       break;
     case 1:
-      console.log("--x");
+      console.log("--x (Execute permissions)");
       break;
     case 2:
-      console.log("-w-");
+      console.log("-w- (Write permissions)");
       break;
     case 3:
-      console.log("-wx");
+      console.log("-wx (Write Execute permissions)");
       break;
     case 4:
-      console.log("r--");
+      console.log("r-- (Read permissions)");
       break;
     case 5:
-      console.log("r-x");
+      console.log("r-x (Read Execute permissions)");
       break;
     case 6:
-      console.log("rw-");
+      console.log("rw- (Read-Write permissions)");
       break;
     case 7:
-      console.log("rwx");
+      console.log("rwx (full permissions)");
       break;
     default:
       console.log('Error: Unknown');
