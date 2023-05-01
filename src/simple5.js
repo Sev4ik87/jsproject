@@ -1,7 +1,7 @@
 "use strict";
 let a = Number(prompt("Enter a number"));
 let result = 0;
-
+let number = a;
 if (Number.isNaN(a) || a < 0) {
   console.log("Enter wrong number");
 } else {
@@ -11,5 +11,5 @@ if (Number.isNaN(a) || a < 0) {
     }
     a--;
   }
-  console.log('Number of multiples of 5 = '+result);
+  console.log('Number of multiples of 5 (' + number + ')=' +result);
 }
