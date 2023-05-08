@@ -14,7 +14,6 @@ function diffage(sonAge, futhAge) {
     console.log("Wrong number");
   }
 }
-let sonAge, futhAge;
 
 diffage(10, 15);
-diffage(10, 25);
+diffage(10, 35);
