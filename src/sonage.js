@@ -1,4 +1,10 @@
 "use strict";
+/**
+ * 
+ * @param {number} sonAge first operator
+ * @param {number} futhAge second operator
+ * @param {number} diffYear resulting year
+ */
 function diffage(sonAge, futhAge) {
   let diffYear;
   if (futhAge - sonAge >= 15 && futhAge > 0 && sonAge > 0) {
