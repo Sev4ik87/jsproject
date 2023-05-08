@@ -1,3 +1,5 @@
+'use strict';
+
 function fibonachi(n) {
   let a = 1;
   let b = 1;
