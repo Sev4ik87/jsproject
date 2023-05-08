@@ -9,5 +9,5 @@ function fibonachi(n) {
   console.log(b)
 }
 
- fibonachi(3); // 2
- fibonachi(7); // 13
+ fibonachi(4); 
+ fibonachi(9); 
