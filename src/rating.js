@@ -1,4 +1,11 @@
 "use strict";
+/**
+ * 
+ * @param {number} rate1 first operator
+ * @param {number} rate2 second operator
+ * @param {number} win third operator
+ * @param {number} result additional container
+ */
 function setRate(rate1, rate2, win) {
   let result = 0;
   if (
