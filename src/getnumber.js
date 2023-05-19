@@ -1,16 +1,19 @@
 /**
+ * Функция для получения строки, описывающей, как получить заданное число с помощью математических операций над числом "1".
+ * Разрешены только операции умножения и сложения с коэффициентами "3" и "5".
+ * Искомое число передается в аргументы функции.
  *
  * @param {number} targetNumber - Заданное число.
- * @returns {string} - Строка, описывающая получение заданного числа, или сообщение об невозможности.
+ * @returns {string} - Строка, описывающая получение заданного числа в формате "число=выражение", или сообщение об невозможности.
  */
 function describeNumber(targetNumber) {
   if (targetNumber === 1) {
-    return '1';
+    return '1=1';
   }
   
   function findExpression(currentNumber, expr) {
     if (currentNumber === targetNumber) {
-      return expr;
+      return `${targetNumber}=${expr}`;
     }
     
     if (currentNumber > targetNumber) {
@@ -49,7 +52,7 @@ function describeNumber(targetNumber) {
 }
 
 
-
+console.log(describeNumber(2));
 console.log(describeNumber(9));
 console.log(describeNumber(10));
 console.log(describeNumber(13));
