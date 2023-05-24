@@ -16,5 +16,5 @@ this.every = function(fn) {
 }
 }
 
-const myArr = new Array (0, 10, 20);
+const myArr = new Array (6, 10, 20);
 console.log(myArr.every (el => el % 2 === 0)); 
