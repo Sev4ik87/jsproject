@@ -6,7 +6,7 @@ this.every = function(fn) {
   }
   for (let i = this.length - 1; i >= 0; i--) {
       if (this[i] === 0) {
-        return false; // Возвращаем false, если элемент равен 0
+        return false;
       }
       if (!fn(this[i], i, this)) {
         return false;
@@ -17,4 +17,4 @@ this.every = function(fn) {
 }
 
 const myArr = [0, 10, 20];
-console.log(myArr.every(el => el % 2 === 0)); // Выводит: false
+console.log(myArr.every(el => el % 2 === 0)); 
