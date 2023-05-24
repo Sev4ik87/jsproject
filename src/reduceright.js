@@ -7,7 +7,7 @@ const arrArr4 = [
 ];
 
 function myReduceRight(arr, callback, initialValue) {
-  if (arr.length === 0 && initialValue === undefined) {
+  if (arr.length === 0 && !initialValue) {
     throw new TypeError('Reduce of empty array');
   }
 
