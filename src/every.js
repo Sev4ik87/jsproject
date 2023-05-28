@@ -22,12 +22,10 @@ function MyEvery(){
 
 this.every = function(fn) {
   if (this.length === 0) {
-    return false;
+    return true;
   }
   for (let i = this.length - 1; i >= 0; i--) {
-      if (this[i] === 0) {
-        return false;
-      }
+      
       if (!fn(this[i], i, this)) {
         return false;
       }
