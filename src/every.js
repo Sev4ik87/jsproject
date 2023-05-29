@@ -1,4 +1,5 @@
 "use strict";
+
 function MyArray(...args) {
   this.length = 0;
   for (let i = 0; i < args.length; i++) {
@@ -6,11 +7,10 @@ function MyArray(...args) {
   }
   return this;
 }
+
 MyArray.prototype = new MyEvery();
 
-
-function MyEvery(){
-
+function MyEvery() {
   this.push = function (...args) {
     if (args.length > 0) {
       for (let i = 0; i < args.length; i++) {
@@ -18,21 +18,20 @@ function MyEvery(){
       }
     }
     return this.length;
-  }
+  };
 
-this.every = function(fn) {
-  if (this.length === 0) {
-    return true;
-  }
-  for (let i = this.length - 1; i >= 0; i--) {
-      
+  this.every = function (fn) {
+    if (this.length === 0) {
+      return true;
+    }
+    for (let i = 0; i < this.length; i++) {
       if (!fn(this[i], i, this)) {
         return false;
       }
-  }
-  return true;
-}
+    }
+    return true;
+  };
 }
 
-const myArr = new MyEvery(10, 20, 30);
-console.log(myArr.every(el => el % 2 === 0));
+const myArr = new MyArray(10, 20, 30);
+console.log(myArr.every((el) => el % 2 === 0));
