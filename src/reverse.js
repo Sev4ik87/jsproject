@@ -14,15 +14,14 @@ MyArray2.prototype = new MyReverse();
 
 function MyReverse(){
 this.reverse = function() {
-  const tempArray = [];
-  for (let i = this.length - 1; i >= 0; i--) {
-    tempArray.push(this[i]);
-  }
+  let left = 0;
+  let right = this.length - 1;
 
-  for (let i = 0; i < this.length; i++) {
-    this[i] = tempArray[i];
+  while (left < right) {
+    [this[left], this[right]] = [this[right], this[left]];
+    left++;
+    right--;
   }
-
   return this;
 }
 
