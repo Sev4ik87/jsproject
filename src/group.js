@@ -1,14 +1,4 @@
-function checkGroupNames(arrGroups) {
-  const regex = /^(?:[FD][D]|[FM][M]|[FE][E]|[fd][d]|[fm][m]|[fe][e])(20\d{2})-\d{1,2}(-\d+)?$/;
-
-  for (let groupName of arrGroups) {
-    if (regex.test(groupName)) {
-      console.log(`${groupName}: Success`);
-    } else {
-      console.log(`${groupName}: Error`);
-    }
-  }
-}
+"use strict";
 
 const arrGroups = [
   'FE2021-5',
@@ -25,4 +15,18 @@ const arrGroups = [
   'FM2022-1',
 ];
 
-checkGroupNames(arrGroups);
+function checkGroupNames(groupName) {
+  const regex = /^(F[DEM]|f[dem])20\d{2}(-\d+)?$/g;
+
+    if (regex.test(groupName)) {
+    
+      return (`${groupName}: Success`);
+    }
+    return  (`${groupName}: Error`);
+  }
+for (const name of arrGroups) {
+console.log(checkGroupNames(name));
+}
+
+
+
